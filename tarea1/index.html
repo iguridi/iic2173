@@ -1,0 +1,16 @@
+{{with .Notice}}<div id="notice">{{.}}</div>{{end}}
+<h1>Tarea1</h1>
+
+
+<form action="/" method="POST">
+  Comment: <input type="text" name="comment" value="{{.Message}}"><br>
+  <input type="submit" value="Submit">
+</form>
+
+{{with .Comments}}
+<ol>
+  {{range .}}
+  <li><b>{{.Time.String}}</b> - <cite>{{.IP.String}}</cite><p>{{.Message.String}}</p></li>
+  {{end}}
+</ol>
+{{end}}
