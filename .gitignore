@@ -11,7 +11,8 @@
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
 
-
+# personal info file
+info.txt
 
 # Created by https://www.gitignore.io/api/node
 
