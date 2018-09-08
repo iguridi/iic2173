@@ -12,7 +12,7 @@ It was based on:
 
 - The view template on this [example](https://github.com/GoogleCloudPlatform/golang-samples/blob/8deb2909eadf32523007fd8fe9e8755a12c6d463/appengine/gophers/gophers-4/main.go)
 
-- And [Build a Go Web App with PostgreSQL Series](https://www.calhoun.io/inserting-records-into-a-postgresql-database-with-gos-database-sql-package/)
+- And used the tutorial Using PostgreSQL with Go, a series which starts with this [article](https://www.calhoun.io/how-to-install-postgresql-9-5-on-ubuntu-16-04/). It goes from the basics of installing and setting up Postgres to more Go related actions like querying multiple rows using the Go sql package.
 
 
 

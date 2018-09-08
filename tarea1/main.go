@@ -7,6 +7,7 @@ import (
   "html/template"
   "net/http"
   "time"
+  "os"
 
   _ "github.com/lib/pq"
 )
@@ -37,15 +38,17 @@ const (
   host     = "localhost"
   port     = 5432
   user     = "postgres"
-  password = "hola"
   dbname   = "test"
 )
 
 
 func index(w http.ResponseWriter, r *http.Request) {
+  if os.Getenv("PGPASSWORD") == "" {
+    panic("PGPASSWORD env variable not set")
+  }
   psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+
     "password=%s dbname=%s sslmode=disable",
-    host, port, user, password, dbname)
+    host, port, user, "hola", dbname)
 
   params := Params{}
   
